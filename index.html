@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JENCY — Maison de Luxe & Haute Living</title>
+  <meta name="description"
+    content="Discover JENCY. Timeless luxury fashion, fine artisan jewelry, handcrafted leather goods, and high-concentration Grasse fragrances." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            jency: {
+              canvas: '#FAF7F2',
+              surface: '#F4EFEB',
+              card: '#FFFFFF',
+              espresso: '#24201E',
+              muted: '#6B625C',
+              light: '#9C938C',
+              gold: '#C59B67',
+              goldHover: '#AF8552',
+              rose: '#D8A48F',
+              border: '#E8DFD5'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body
+  class="bg-[#FAF7F2] text-[#24201E] antialiased selection:bg-[#D8A48F] selection:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <aside aria-label="Announcement"
+    class="bg-[#24201E] text-[#FAF7F2] text-[11px] sm:text-xs py-2 px-4 tracking-wider uppercase">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="hidden md:flex items-center gap-4 text-[#B5ABA1]">
+        <span class="flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#C59B67] animate-pulse"></span>
+          Spring / Summer '26 Haute Capsule Now Live
+        </span>
+        <span class="text-[#59524C]">|</span>
+        <span>Atelier Privé: Paris • Milan • New York</span>
+      </div>
+
+      <div class="mx-auto md:mx-0 text-center font-light tracking-widest">
+        Complimentary Express Courier on Orders over $350 • Code <span
+          class="text-[#C59B67] font-semibold tracking-wider">JENCY15</span> for 15% off
+      </div>
+
+      <div class="hidden sm:flex items-center gap-3">
+        <!-- Currency Switcher -->
+        <label for="topCurrencySelect" class="sr-only">Currency</label>
+        <select id="topCurrencySelect"
+          class="currency-picker bg-transparent text-[#FAF7F2] border-none text-[11px] font-sans tracking-wider focus:outline-none cursor-pointer">
+          <option value="USD" class="bg-[#24201E] text-white">USD ($)</option>
+          <option value="EUR" class="bg-[#24201E] text-white">EUR (€)</option>
+          <option value="GBP" class="bg-[#24201E] text-white">GBP (£)</option>
+          <option value="INR" class="bg-[#24201E] text-white">INR (₹)</option>
+        </select>
+        <span class="text-[#59524C]">|</span>
+        <a href="#atelier" class="text-[#B5ABA1] hover:text-[#FAF7F2] transition-colors">Concierge</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= STICKY NAVIGATION ================= -->
+  <header class="sticky top-0 z-40 luxury-glass border-b border-[#E8DFD5]/80 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+      <!-- Left Nav Links (Desktop) -->
+      <div class="hidden lg:flex items-center space-x-7 text-xs font-medium uppercase tracking-widest text-[#24201E]">
+        <a href="#collections" class="hover:text-[#C59B67] transition-colors py-2 relative group">
+          Collections
+          <span
+            class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-[#C59B67] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#categoryJewelry" class="hover:text-[#C59B67] transition-colors py-2 relative group">
+          Fine Jewelry
+          <span
+            class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-[#C59B67] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#categoryCouture" class="hover:text-[#C59B67] transition-colors py-2 relative group">
+          Haute Couture
+          <span
+            class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-[#C59B67] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#lookbook" class="hover:text-[#C59B67] transition-colors py-2 relative group">
+          Lookbook
+          <span
+            class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-[#C59B67] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#atelier" class="hover:text-[#C59B67] transition-colors py-2 relative group">
+          The Atelier
+          <span
+            class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-[#C59B67] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex lg:hidden items-center">
+        <button id="mobileMenuToggle" type="button" class="p-2 text-[#24201E] hover:text-[#C59B67] transition-colors"
+          aria-label="Open Navigation Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Center Brand Logo -->
+      <a href="#" class="flex flex-col items-center group text-center">
+        <span
+          class="font-serif text-3xl sm:text-4xl tracking-[0.3em] font-normal text-[#24201E] group-hover:text-[#C59B67] transition-colors uppercase pl-[0.3em]">
+          J E N C Y
+        </span>
+        <span class="text-[9px] font-sans tracking-[0.35em] text-[#9C938C] uppercase -mt-0.5">
+          Maison de Luxe
+        </span>
+      </a>
+
+      <!-- Right Utility Actions -->
+      <div class="flex items-center space-x-2 sm:space-x-4">
+        <!-- Search Trigger / Quick Search Bar (Desktop) -->
+        <div class="hidden sm:flex items-center relative">
+          <label for="desktopNavSearch" class="sr-only">Search Creations</label>
+          <input type="text" id="desktopNavSearch" placeholder="Search creations..."
+            class="jency-search-input pl-9 pr-4 py-1.5 text-xs bg-[#F4EFEB] border border-[#E8DFD5] rounded-full text-[#24201E] placeholder-[#9C938C] focus:outline-none focus:border-[#24201E] focus:bg-white transition-all w-36 focus:w-56" />
+          <svg class="w-4 h-4 text-[#9C938C] absolute left-3 pointer-events-none" fill="none" stroke="currentColor"
+            stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+
+        <!-- Wishlist Button -->
+        <button type="button" onclick="window.JencyApp.openWishlistDrawer()"
+          class="relative p-2.5 rounded-full text-[#24201E] hover:bg-[#F4EFEB] hover:text-[#C59B67] transition-all"
+          aria-label="View Wishlist">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+          </svg>
+          <span id="wishlistCountBadge"
+            class="absolute top-1 right-1 w-4 h-4 rounded-full bg-[#D8A48F] text-white text-[9px] font-medium flex items-center justify-center transition-all duration-300 opacity-0 scale-0">0</span>
+        </button>
+
+        <!-- Shopping Bag Button -->
+        <button type="button" onclick="window.JencyApp.openCartDrawer()"
+          class="relative p-2.5 rounded-full text-[#24201E] hover:bg-[#F4EFEB] hover:text-[#C59B67] transition-all"
+          aria-label="View Shopping Bag">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25c-.67 0-1.19-.578-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+          </svg>
+          <span id="cartCountBadge"
+            class="absolute top-1 right-1 w-4 h-4 rounded-full bg-[#24201E] text-white text-[9px] font-medium flex items-center justify-center transition-all duration-300 opacity-0 scale-0">0</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Slide Navigation Menu (Hidden by default) -->
+    <div id="mobileMenuPanel" class="hidden lg:hidden bg-[#FAF7F2] border-b border-[#E8DFD5] px-6 py-6 space-y-4">
+      <div class="relative mb-4">
+        <label for="mobileNavSearch" class="sr-only">Search</label>
+        <input type="text" id="mobileNavSearch" placeholder="Search creations..."
+          class="jency-search-input w-full pl-10 pr-4 py-2 text-xs bg-[#F4EFEB] border border-[#E8DFD5] rounded-full text-[#24201E]" />
+        <svg class="w-4 h-4 text-[#9C938C] absolute left-3 top-2.5" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+
+      <div class="flex flex-col space-y-3 text-sm uppercase tracking-widest font-medium text-[#24201E]">
+        <a href="#collections" class="mobile-nav-link py-1 hover:text-[#C59B67]">Collections</a>
+        <a href="#categoryJewelry" class="mobile-nav-link py-1 hover:text-[#C59B67]">Fine Jewelry</a>
+        <a href="#categoryCouture" class="mobile-nav-link py-1 hover:text-[#C59B67]">Haute Couture</a>
+        <a href="#lookbook" class="mobile-nav-link py-1 hover:text-[#C59B67]">Lookbook</a>
+        <a href="#atelier" class="mobile-nav-link py-1 hover:text-[#C59B67]">The Atelier</a>
+      </div>
+
+      <div class="pt-4 border-t border-[#E8DFD5] flex items-center justify-between text-xs text-[#6B625C]">
+        <span>Currency</span>
+        <select class="currency-picker bg-transparent border border-[#E8DFD5] px-2 py-1 rounded text-xs font-sans">
+          <option value="USD">USD ($)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+          <option value="INR">INR (₹)</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section
+    class="relative overflow-hidden pt-8 pb-16 lg:py-20 bg-gradient-to-b from-[#FAF7F2] via-[#F6F0E8] to-[#FAF7F2]">
+    <!-- Decorative subtle ambient blooms -->
+    <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#EBD8CE]/35 blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-[#DBCBB8]/30 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+        <!-- Left Content -->
+        <div class="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
+
+          <div
+            class="inline-flex items-center gap-2 self-center lg:self-start px-3.5 py-1.5 rounded-full bg-[#EFE8E0] border border-[#E0D5C7] text-[11px] font-sans tracking-widest uppercase text-[#6B625C] mb-6">
+            <span class="w-2 h-2 rounded-full bg-[#C59B67]"></span>
+            Maison JENCY • Collection Printemps-Été 2026
+          </div>
+
+          <h1
+            class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-[#24201E] tracking-tight leading-[1.08] mb-6">
+            Sublime Silhouettes, <br />
+            <span class="italic font-light text-[#C59B67]">Crafted for Everyday Grace.</span>
+          </h1>
+
+          <p class="text-sm sm:text-base text-[#6B625C] max-w-xl mx-auto lg:mx-0 font-light leading-relaxed mb-9">
+            An elevated dialogue between architectural purity and sensory indulgence. Experience Grade-6A Mulberry silk
+            gowns, organic Australian baroque pearls, and vegetable-tanned Tuscan calfskin.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
+            <a href="#collections"
+              class="w-full sm:w-auto px-8 py-4 bg-[#24201E] hover:bg-[#C59B67] text-[#FAF7F2] text-xs uppercase tracking-widest font-semibold rounded-full shadow-lg transition-all duration-300 text-center">
+              Explore Collection
+            </a>
+            <a href="#lookbook"
+              class="w-full sm:w-auto px-8 py-4 bg-white/80 hover:bg-white text-[#24201E] border border-[#E8DFD5] text-xs uppercase tracking-widest font-semibold rounded-full shadow-sm hover:shadow transition-all text-center">
+              View SS26 Lookbook
+            </a>
+          </div>
+
+          <!-- Proof Badges -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-[#E8DFD5]/80 max-w-lg mx-auto lg:mx-0">
+            <div>
+              <p class="font-serif text-2xl font-semibold text-[#24201E]">100%</p>
+              <p class="text-[11px] text-[#6B625C] tracking-wide uppercase mt-0.5">Ethical Silk & Metals</p>
+            </div>
+            <div>
+              <p class="font-serif text-2xl font-semibold text-[#24201E]">Atelier</p>
+              <p class="text-[11px] text-[#6B625C] tracking-wide uppercase mt-0.5">Florence & Grasse</p>
+            </div>
+            <div>
+              <p class="font-serif text-2xl font-semibold text-[#24201E]">Global</p>
+              <p class="text-[11px] text-[#6B625C] tracking-wide uppercase mt-0.5">Express Delivery</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Mosaic -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+
+            <!-- Primary Image -->
+            <div
+              class="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative bg-[#F4EFEB]">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80"
+                alt="JENCY Editorial Haute Couture" class="w-full h-full object-cover object-center" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <span
+                  class="text-[10px] uppercase tracking-widest font-sans bg-white/20 backdrop-blur-md px-3 py-1 rounded-full">Editorial
+                  Showcase</span>
+                <p class="font-serif text-xl font-normal mt-2 leading-snug">The Aurelia Gown in Rose Champagne</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge Card 1 -->
+            <div
+              class="absolute -bottom-6 -left-6 sm:-left-8 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-[#E8DFD5] max-w-[210px] hidden sm:block">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#D8A48F]"></span>
+                <span class="text-[10px] font-sans tracking-widest uppercase text-[#6B625C] font-semibold">Artisan Fine
+                  Jewels</span>
+              </div>
+              <p class="font-serif text-sm text-[#24201E]">Hand-selected Australian Baroque Pearl</p>
+              <p class="text-[11px] text-[#C59B67] font-medium mt-1">18K Solid Gold Bail</p>
+            </div>
+
+            <!-- Floating Badge Card 2 -->
+            <div
+              class="absolute -top-6 -right-6 sm:-right-8 bg-[#24201E] text-white p-4 rounded-2xl shadow-xl max-w-[190px] hidden sm:block">
+              <span class="text-[9px] tracking-[0.2em] uppercase text-[#C59B67] font-mono">Privilege Access</span>
+              <p class="font-serif text-sm mt-1">Private Capsule '26</p>
+              <p class="text-[10px] text-[#B5ABA1] mt-0.5">Hand-numbered Editions</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MARQUEE TICKER ================= -->
+  <section class="py-4 bg-[#F4EFEB] border-y border-[#E8DFD5] overflow-hidden select-none"
+    aria-label="Brand Highlights">
+    <div
+      class="animate-marquee flex items-center space-x-12 text-xs uppercase tracking-[0.25em] text-[#6B625C] whitespace-nowrap">
+      <span>Grade-6A Mulberry Silk</span>
+      <span class="text-[#C59B67]">✦</span>
+      <span>Conflict-Free Fine Diamonds</span>
+      <span class="text-[#C59B67]">✦</span>
+      <span>Handcrafted Tuscan Leathers</span>
+      <span class="text-[#C59B67]">✦</span>
+      <span>Artisan Fragrance from Grasse</span>
+      <span class="text-[#C59B67]">✦</span>
+      <span>Complimentary Worldwide Courier</span>
+      <span class="text-[#C59B67]">✦</span>
+      <span>Grade-6A Mulberry Silk</span>
+      <span class="text-[#C59B67]">✦</span>
+      <span>Conflict-Free Fine Diamonds</span>
+      <span class="text-[#C59B67]">✦</span>
+      <span>Handcrafted Tuscan Leathers</span>
+      <span class="text-[#C59B67]">✦</span>
+      <span>Artisan Fragrance from Grasse</span>
+      <span class="text-[#C59B67]">✦</span>
+      <span>Complimentary Worldwide Courier</span>
+      <span class="text-[#C59B67]">✦</span>
+    </div>
+  </section>
+
+  <!-- ================= CATEGORIES CURATION ================= -->
+  <section class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span class="text-xs uppercase tracking-[0.25em] font-sans text-[#C59B67] font-semibold">Atelier Universes</span>
+      <h2 class="font-serif text-3xl sm:text-4xl text-[#24201E] font-normal mt-2">Curated Realms of JENCY</h2>
+      <p class="text-xs sm:text-sm text-[#6B625C] font-light mt-3 leading-relaxed">
+        Explore creations defined by meticulous material selection, human warmth, and quiet luxury.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Category 1 -->
+      <div id="categoryCouture"
+        onclick="document.querySelector('[data-category=couture]').click(); document.getElementById('collections').scrollIntoView();"
+        class="group relative h-96 rounded-2xl overflow-hidden cursor-pointer shadow-md transition-all duration-500 hover:shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80"
+          alt="Haute Couture"
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 text-white">
+          <span class="text-[10px] tracking-widest uppercase text-[#D8A48F]">Universe I</span>
+          <h3 class="font-serif text-2xl font-normal mt-1">Haute Couture</h3>
+          <p class="text-xs text-white/80 mt-1 line-clamp-1">Mulberry silks & Belgian flax tailoring</p>
+          <span
+            class="inline-flex items-center gap-1.5 text-xs text-[#C59B67] font-medium mt-3 group-hover:translate-x-1 transition-transform">
+            Discover Capsule →
+          </span>
+        </div>
+      </div>
+
+      <!-- Category 2 -->
+      <div id="categoryJewelry"
+        onclick="document.querySelector('[data-category=jewelry]').click(); document.getElementById('collections').scrollIntoView();"
+        class="group relative h-96 rounded-2xl overflow-hidden cursor-pointer shadow-md transition-all duration-500 hover:shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+          alt="Fine Jewelry"
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 text-white">
+          <span class="text-[10px] tracking-widest uppercase text-[#D8A48F]">Universe II</span>
+          <h3 class="font-serif text-2xl font-normal mt-1">Fine Jewelry</h3>
+          <p class="text-xs text-white/80 mt-1 line-clamp-1">Baroque pearls & 18K fairmined gold</p>
+          <span
+            class="inline-flex items-center gap-1.5 text-xs text-[#C59B67] font-medium mt-3 group-hover:translate-x-1 transition-transform">
+            Discover Capsule →
+          </span>
+        </div>
+      </div>
+
+      <!-- Category 3 -->
+      <div
+        onclick="document.querySelector('[data-category=leather]').click(); document.getElementById('collections').scrollIntoView();"
+        class="group relative h-96 rounded-2xl overflow-hidden cursor-pointer shadow-md transition-all duration-500 hover:shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80"
+          alt="Leather Goods"
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 text-white">
+          <span class="text-[10px] tracking-widest uppercase text-[#D8A48F]">Universe III</span>
+          <h3 class="font-serif text-2xl font-normal mt-1">Leather Goods</h3>
+          <p class="text-xs text-white/80 mt-1 line-clamp-1">Florentine calfskin & brass hardware</p>
+          <span
+            class="inline-flex items-center gap-1.5 text-xs text-[#C59B67] font-medium mt-3 group-hover:translate-x-1 transition-transform">
+            Discover Capsule →
+          </span>
+        </div>
+      </div>
+
+      <!-- Category 4 -->
+      <div
+        onclick="document.querySelector('[data-category=living]').click(); document.getElementById('collections').scrollIntoView();"
+        class="group relative h-96 rounded-2xl overflow-hidden cursor-pointer shadow-md transition-all duration-500 hover:shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80"
+          alt="Living & Fragrance"
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 text-white">
+          <span class="text-[10px] tracking-widest uppercase text-[#D8A48F]">Universe IV</span>
+          <h3 class="font-serif text-2xl font-normal mt-1">Living & Scent</h3>
+          <p class="text-xs text-white/80 mt-1 line-clamp-1">Grasse perfumes & ambient candles</p>
+          <span
+            class="inline-flex items-center gap-1.5 text-xs text-[#C59B67] font-medium mt-3 group-hover:translate-x-1 transition-transform">
+            Discover Capsule →
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MAIN PRODUCT CATALOG ================= -->
+  <section id="collections" class="py-16 sm:py-24 bg-[#F4EFEB]/60 border-t border-[#E8DFD5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Title & Filter Controls -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b border-[#E8DFD5]">
+        <div>
+          <span class="text-xs uppercase tracking-[0.25em] font-sans text-[#C59B67] font-semibold">The Permanent &
+            Capsule Catalog</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-[#24201E] font-normal mt-1">The JENCY Collection</h2>
+          <p id="productsCountLabel" class="text-xs text-[#6B625C] mt-1 font-light">Loading catalog...</p>
+        </div>
+
+        <!-- Sorting & Filters Bar -->
+        <div class="flex flex-wrap items-center gap-3">
+          <div class="flex items-center gap-2">
+            <label for="sortSelector" class="text-xs uppercase tracking-wider text-[#6B625C] font-medium">Sort
+              By:</label>
+            <select id="sortSelector"
+              class="bg-white border border-[#E8DFD5] text-[#24201E] text-xs rounded-full px-4 py-2 focus:outline-none focus:border-[#24201E] transition-colors cursor-pointer">
+              <option value="featured">Curated & Bestsellers</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Customer Rating</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar">
+        <button type="button" data-category="all"
+          class="filter-pill active px-5 py-2 rounded-full border border-[#E8DFD5] text-xs uppercase tracking-widest font-medium transition-all whitespace-nowrap bg-white text-[#24201E]">
+          All Creations
+        </button>
+        <button type="button" data-category="couture"
+          class="filter-pill px-5 py-2 rounded-full border border-[#E8DFD5] text-xs uppercase tracking-widest font-medium transition-all whitespace-nowrap bg-white text-[#24201E]">
+          Haute Couture
+        </button>
+        <button type="button" data-category="jewelry"
+          class="filter-pill px-5 py-2 rounded-full border border-[#E8DFD5] text-xs uppercase tracking-widest font-medium transition-all whitespace-nowrap bg-white text-[#24201E]">
+          Fine Jewelry
+        </button>
+        <button type="button" data-category="leather"
+          class="filter-pill px-5 py-2 rounded-full border border-[#E8DFD5] text-xs uppercase tracking-widest font-medium transition-all whitespace-nowrap bg-white text-[#24201E]">
+          Leather Goods
+        </button>
+        <button type="button" data-category="accessories"
+          class="filter-pill px-5 py-2 rounded-full border border-[#E8DFD5] text-xs uppercase tracking-widest font-medium transition-all whitespace-nowrap bg-white text-[#24201E]">
+          Accessories
+        </button>
+        <button type="button" data-category="living"
+          class="filter-pill px-5 py-2 rounded-full border border-[#E8DFD5] text-xs uppercase tracking-widest font-medium transition-all whitespace-nowrap bg-white text-[#24201E]">
+          Living & Scent
+        </button>
+      </div>
+
+      <!-- Products Grid (Rendered via js/app.js) -->
+      <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDITORIAL LOOKBOOK SECTION ================= -->
+  <section id="lookbook" class="py-20 sm:py-28 bg-[#FAF7F2] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Editorial Image with Floating Card -->
+        <div class="lg:col-span-6 relative">
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-[#F4EFEB] relative">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80"
+              alt="JENCY Haute Lookbook Editorial" class="w-full h-full object-cover" />
+          </div>
+
+          <div
+            class="absolute -bottom-8 -right-4 sm:-right-8 bg-[#24201E] text-white p-6 sm:p-8 rounded-2xl shadow-2xl max-w-xs sm:max-w-sm">
+            <span class="text-[10px] tracking-[0.25em] uppercase text-[#C59B67] font-semibold">Editorial
+              Statement</span>
+            <p class="font-serif italic text-base sm:text-lg mt-2 text-[#FAF7F2] font-light leading-snug">
+              "To wear JENCY is to inhabit a realm where quiet poise speaks louder than ornament."
+            </p>
+            <div class="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#B5ABA1]">
+              <span>Jency Atelier Studio</span>
+              <span class="text-[#C59B67]">Paris VII</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Story & Details -->
+        <div class="lg:col-span-6 lg:pl-8">
+          <span class="text-xs uppercase tracking-[0.25em] font-sans text-[#C59B67] font-semibold">Capsule Story •
+            Spring / Summer '26</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-normal text-[#24201E] mt-3 leading-tight">
+            The Dawn of Serenity
+          </h2>
+
+          <p class="text-sm sm:text-base text-[#6B625C] font-light mt-6 leading-relaxed">
+            Conceived along the Mediterranean coast during the first blush of summer, this capsule captures the poetry
+            of morning light filtering through woven linen and glistening upon baroque pearls.
+          </p>
+
+          <div class="space-y-6 mt-8">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-[#EFE8E0] flex items-center justify-center shrink-0 text-[#24201E]">
+                <svg class="w-5 h-5 text-[#C59B67]" fill="none" stroke="currentColor" stroke-width="1.5"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-serif text-lg text-[#24201E] font-medium">Bespoke Tailoring & Bias Cuts</h4>
+                <p class="text-xs sm:text-sm text-[#6B625C] font-light mt-1">Gowns tailored to follow the natural
+                  contours of the body with fluid, effortless motion.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-[#EFE8E0] flex items-center justify-center shrink-0 text-[#24201E]">
+                <svg class="w-5 h-5 text-[#C59B67]" fill="none" stroke="currentColor" stroke-width="1.5"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-serif text-lg text-[#24201E] font-medium">Traceable Materials & Certified Ateliers</h4>
+                <p class="text-xs sm:text-sm text-[#6B625C] font-light mt-1">From Fairmined certified gold in Valenza to
+                  regenerative silk farms in Como.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10">
+            <button type="button" onclick="document.getElementById('collections').scrollIntoView();"
+              class="px-8 py-3.5 bg-[#24201E] hover:bg-[#C59B67] text-[#FAF7F2] text-xs uppercase tracking-widest font-semibold rounded-full shadow transition-all duration-300">
+              Shop the Editorial Pieces
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS & PRESS ================= -->
+  <section class="py-16 sm:py-24 bg-[#F4EFEB] border-t border-[#E8DFD5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-[0.25em] font-sans text-[#C59B67] font-semibold">Voices of
+          Distinction</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-[#24201E] font-normal mt-2">Acclaimed by Patrons Worldwide</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="bg-white p-8 rounded-2xl border border-[#E8DFD5] shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-[#C59B67] gap-1 mb-4">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="font-serif italic text-[#24201E] text-base leading-relaxed">
+              "JENCY represents the rare nexus where architectural restraint meets sensual luxury. The Aurelia gown is
+              nothing short of poetry in motion."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 mt-8 pt-6 border-t border-[#F0E8DF]">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+              alt="Elena Vance" class="w-11 h-11 rounded-full object-cover border border-[#E8DFD5]" />
+            <div>
+              <p class="font-serif text-sm font-medium text-[#24201E]">Elena Vance</p>
+              <p class="text-[11px] text-[#9C938C]">Fashion Director • Paris</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white p-8 rounded-2xl border border-[#E8DFD5] shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-[#C59B67] gap-1 mb-4">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="font-serif italic text-[#24201E] text-base leading-relaxed">
+              "The baroque pearl necklace feels singularly unique, like an heirloom passed down through generations. The
+              packaging alone took my breath away."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 mt-8 pt-6 border-t border-[#F0E8DF]">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80"
+              alt="Camille Laurent" class="w-11 h-11 rounded-full object-cover border border-[#E8DFD5]" />
+            <div>
+              <p class="font-serif text-sm font-medium text-[#24201E]">Camille Laurent</p>
+              <p class="text-[11px] text-[#9C938C]">Private Collector • Geneva</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white p-8 rounded-2xl border border-[#E8DFD5] shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-[#C59B67] gap-1 mb-4">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="font-serif italic text-[#24201E] text-base leading-relaxed">
+              "From customer concierge to the buttery touch of the Tuscan calfskin bag, shopping at JENCY is an
+              unparalleled sensory experience."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 mt-8 pt-6 border-t border-[#F0E8DF]">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80"
+              alt="Sophia Sterling" class="w-11 h-11 rounded-full object-cover border border-[#E8DFD5]" />
+            <div>
+              <p class="font-serif text-sm font-medium text-[#24201E]">Sophia Sterling</p>
+              <p class="text-[11px] text-[#9C938C]">Architectural Critic • New York</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ATELIER & CRAFTSMANSHIP ================= -->
+  <section id="atelier" class="py-20 sm:py-28 bg-[#FAF7F2]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-[0.25em] font-sans text-[#C59B67] font-semibold">Our Heritage &
+          Promise</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-[#24201E] font-normal mt-2">The Architecture of Care</h2>
+        <p class="text-xs sm:text-sm text-[#6B625C] font-light mt-3 leading-relaxed">
+          Every JENCY piece is created with three non-negotiable principles: uncompromising material integrity,
+          generational artisan hands, and a commitment to timeless perpetuity.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div class="p-8 rounded-2xl bg-[#F4EFEB] border border-[#E8DFD5] text-center flex flex-col items-center">
+          <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-[#C59B67] shadow-sm mb-5">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-medium text-[#24201E]">Circular & Certified</h3>
+          <p class="text-xs sm:text-sm text-[#6B625C] font-light mt-3 leading-relaxed">
+            100% Conflict-free stones, recycled precious metals, and natural vegetable dyes that tread lightly upon the
+            earth.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-[#F4EFEB] border border-[#E8DFD5] text-center flex flex-col items-center">
+          <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-[#C59B67] shadow-sm mb-5">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-medium text-[#24201E]">Master Craft Traditions</h3>
+          <p class="text-xs sm:text-sm text-[#6B625C] font-light mt-3 leading-relaxed">
+            From Florentine leather edge-burnishing to Grasse perfume maceration, honoring centuries of human mastery.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-[#F4EFEB] border border-[#E8DFD5] text-center flex flex-col items-center">
+          <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-[#C59B67] shadow-sm mb-5">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-medium text-[#24201E]">Lifetime Keepsake Care</h3>
+          <p class="text-xs sm:text-sm text-[#6B625C] font-light mt-3 leading-relaxed">
+            Complimentary annual jewelry re-polishing and leather conditioning services for all registered JENCY owners.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VIP NEWSLETTER SIGNUP ================= -->
+  <section class="py-20 bg-[#24201E] text-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+      <span class="text-xs uppercase tracking-[0.3em] font-sans text-[#C59B67] font-semibold">Private Invitations</span>
+      <h2 class="font-serif text-3xl sm:text-5xl font-normal mt-3">Enter the JENCY Circle</h2>
+      <p class="text-xs sm:text-sm text-[#B5ABA1] font-light max-w-lg mx-auto mt-4 leading-relaxed">
+        Receive private previews of limited seasonal capsules, invitations to atelier salon events, and 15% off your
+        inaugural creation with code <span class="text-[#C59B67] font-semibold">JENCY15</span>.
+      </p>
+
+      <form id="newsletterForm" class="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <label for="newsletterEmail" class="sr-only">Email address</label>
+        <input type="email" id="newsletterEmail" required placeholder="Enter your private email..."
+          class="flex-1 px-5 py-3.5 rounded-full bg-[#342D2A] border border-[#4A403B] text-xs text-white placeholder-[#8F847B] focus:outline-none focus:border-[#C59B67]" />
+        <button type="submit"
+          class="px-8 py-3.5 bg-[#C59B67] hover:bg-[#AF8552] text-white text-xs uppercase tracking-widest font-semibold rounded-full transition-colors whitespace-nowrap shadow-lg">
+          Join Circle
+        </button>
+      </form>
+      <p class="text-[10px] text-[#8F847B] mt-3 font-light">Discretion guaranteed. You may withdraw your presence at any
+        moment.</p>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-[#1A1715] text-[#B5ABA1] pt-16 pb-12 border-t border-[#2C2622]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#2C2622]">
+
+        <!-- Brand Bio -->
+        <div class="lg:col-span-2">
+          <a href="#" class="font-serif text-3xl tracking-[0.25em] text-[#FAF7F2] uppercase block">
+            J E N C Y
+          </a>
+          <p class="text-xs font-light text-[#8F847B] max-w-sm mt-3 leading-relaxed">
+            Maison JENCY sculpts contemporary elegance through the marriage of timeless European craft and modern
+            silhouettes.
+          </p>
+          <div class="flex items-center gap-3 mt-6">
+            <span class="text-xs text-[#C59B67]">Ateliers:</span>
+            <span class="text-xs text-[#FAF7F2]">Paris</span>
+            <span class="text-xs text-[#59524C]">•</span>
+            <span class="text-xs text-[#FAF7F2]">Florence</span>
+            <span class="text-xs text-[#59524C]">•</span>
+            <span class="text-xs text-[#FAF7F2]">Grasse</span>
+            <span class="text-xs text-[#59524C]">•</span>
+            <span class="text-xs text-[#FAF7F2]">New York</span>
+          </div>
+        </div>
+
+        <!-- Column 1: Creations -->
+        <div>
+          <h4 class="text-xs font-serif text-[#FAF7F2] uppercase tracking-widest mb-4">Creations</h4>
+          <ul class="text-xs space-y-2.5 font-light">
+            <li><a href="#categoryCouture" class="hover:text-[#C59B67] transition-colors">Haute Silk Gowns</a></li>
+            <li><a href="#categoryJewelry" class="hover:text-[#C59B67] transition-colors">Baroque Pearls & Gold</a></li>
+            <li><a href="#collections" class="hover:text-[#C59B67] transition-colors">Tuscan Leather Bags</a></li>
+            <li><a href="#collections" class="hover:text-[#C59B67] transition-colors">Extrait de Parfum</a></li>
+            <li><a href="#collections" class="hover:text-[#C59B67] transition-colors">Cashmere & Knitwear</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Client Concierge -->
+        <div>
+          <h4 class="text-xs font-serif text-[#FAF7F2] uppercase tracking-widest mb-4">Concierge</h4>
+          <ul class="text-xs space-y-2.5 font-light">
+            <li><a href="#"
+                onclick="alert('JENCY Concierge Service\\n\\nEmail: concierge@jency.atelier\\nHours: 24/7 Global Personal Shopping Assistance'); return false;"
+                class="hover:text-[#C59B67] transition-colors">Private Client Advisor</a></li>
+            <li><a href="#"
+                onclick="alert('Complimentary Worldwide Courier via DHL Express on all orders over $350. Signature required upon delivery.'); return false;"
+                class="hover:text-[#C59B67] transition-colors">Global Delivery</a></li>
+            <li><a href="#"
+                onclick="alert('Complimentary 30-Day Returns & Exchanges in original condition with intact security tags.'); return false;"
+                class="hover:text-[#C59B67] transition-colors">Complimentary Returns</a></li>
+            <li><a href="#"
+                onclick="alert('All JENCY creations arrive in our signature embossed presentation box tied with mulberry silk grosgrain ribbon.'); return false;"
+                class="hover:text-[#C59B67] transition-colors">Gift Presentation</a></li>
+            <li><a href="#"
+                onclick="alert('Lifetime care and restoration service available for verified patrons.'); return false;"
+                class="hover:text-[#C59B67] transition-colors">Atelier Restoration</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: The Maison -->
+        <div>
+          <h4 class="text-xs font-serif text-[#FAF7F2] uppercase tracking-widest mb-4">The Maison</h4>
+          <ul class="text-xs space-y-2.5 font-light">
+            <li><a href="#atelier" class="hover:text-[#C59B67] transition-colors">Our History</a></li>
+            <li><a href="#atelier" class="hover:text-[#C59B67] transition-colors">Sustainability Charter</a></li>
+            <li><a href="#lookbook" class="hover:text-[#C59B67] transition-colors">Editorial Archives</a></li>
+            <li><a href="#"
+                onclick="alert('Careers at JENCY\\n\\nInquiries may be directed to talents@jency.atelier'); return false;"
+                class="hover:text-[#C59B67] transition-colors">Atelier Careers</a></li>
+            <li><a href="#" onclick="alert('Press inquiries: press@jency.atelier'); return false;"
+                class="hover:text-[#C59B67] transition-colors">Press & Relations</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#7A7169]">
+        <p>© 2026 JENCY Maison de Luxe. All rights reserved.</p>
+        <div class="flex items-center space-x-6 mt-4 sm:mt-0">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Atelier</a>
+          <a href="#" class="hover:text-white transition-colors">Cookie Preferences</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SHOPPING BAG DRAWER ================= -->
+  <div id="cartDrawer" class="fixed inset-0 z-50 pointer-events-none transition-all">
+    <!-- Backdrop -->
+    <div onclick="window.JencyApp.closeCartDrawer()"
+      class="drawer-backdrop absolute inset-0 bg-black/50 backdrop-blur-sm opacity-0 transition-opacity"></div>
+
+    <!-- Offcanvas Panel -->
+    <div
+      class="drawer-panel absolute top-0 right-0 h-full w-full max-w-md bg-[#FAF7F2] shadow-2xl flex flex-col translate-x-full transition-transform duration-300 z-10">
+
+      <!-- Drawer Header -->
+      <div class="p-6 border-b border-[#E8DFD5] flex items-center justify-between bg-white">
+        <div>
+          <h3 class="font-serif text-xl text-[#24201E] font-medium">Your Shopping Bag</h3>
+          <p class="text-[11px] text-[#9C938C] uppercase tracking-wider">Maison JENCY Concierge</p>
+        </div>
+        <button onclick="window.JencyApp.closeCartDrawer()"
+          class="p-2 text-[#6B625C] hover:text-[#24201E] rounded-full hover:bg-[#F4EFEB] transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Free Shipping Gauge -->
+      <div class="px-6 py-3.5 bg-[#F4EFEB] border-b border-[#E8DFD5]">
+        <p id="freeShippingText" class="text-xs text-[#24201E] font-light mb-2">Calculating shipping privileges...</p>
+        <div class="w-full bg-[#E5DDD2] h-1.5 rounded-full overflow-hidden">
+          <div id="freeShippingProgress" class="bg-[#C59B67] h-full rounded-full transition-all duration-500"
+            style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Cart Items Scroll Area -->
+      <div id="cartItemsList" class="flex-1 overflow-y-auto px-6 divide-y divide-[#F0E8DF]">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="cartEmptyState" class="hidden flex-1 flex flex-col items-center justify-center p-8 text-center">
+        <div class="w-16 h-16 rounded-full bg-[#F4EFEB] flex items-center justify-center text-[#9C938C] mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25c-.67 0-1.19-.578-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+          </svg>
+        </div>
+        <h4 class="font-serif text-xl text-[#24201E]">Your Bag is Empty</h4>
+        <p class="text-xs text-[#6B625C] font-light mt-1 max-w-xs">Explore our Spring/Summer '26 collection to add
+          hand-finished creations.</p>
+        <button onclick="window.JencyApp.closeCartDrawer(); document.getElementById('collections').scrollIntoView();"
+          class="mt-5 px-6 py-2.5 bg-[#24201E] hover:bg-[#C59B67] text-white text-xs uppercase tracking-widest font-medium rounded-full transition-colors">
+          Browse Creations
+        </button>
+      </div>
+
+      <!-- Summary & Checkout Footer -->
+      <div id="cartSummarySection" class="p-6 bg-white border-t border-[#E8DFD5] space-y-4">
+        <!-- Coupon Form -->
+        <form id="cartCouponForm" class="flex gap-2">
+          <label for="cartCouponInput" class="sr-only">Privilege Code</label>
+          <input type="text" id="cartCouponInput" placeholder="Privilege Code (e.g. JENCY15)"
+            class="flex-1 px-3.5 py-2 text-xs uppercase tracking-wider bg-[#FAF7F2] border border-[#E8DFD5] rounded-lg focus:outline-none focus:border-[#24201E]" />
+          <button type="submit"
+            class="px-4 py-2 bg-[#24201E] text-white text-xs uppercase tracking-wider rounded-lg hover:bg-[#C59B67] transition-colors">Apply</button>
+        </form>
+
+        <div class="space-y-2 text-xs text-[#6B625C] pt-2">
+          <div class="flex justify-between">
+            <span>Subtotal</span>
+            <span id="cartSubtotal" class="font-serif text-sm text-[#24201E]">$0</span>
+          </div>
+          <div id="cartCouponRow" class="hidden flex justify-between text-[#C59B67]">
+            <span class="flex items-center gap-1.5">
+              <span>Privilege:</span>
+              <span id="appliedCouponName" class="font-medium"></span>
+              <button type="button" onclick="window.JencyApp.removeCoupon()"
+                class="text-red-500 hover:underline text-[10px] ml-1">(remove)</button>
+            </span>
+            <span id="cartDiscount">-$0</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Worldwide Delivery</span>
+            <span id="cartShipping">Complimentary</span>
+          </div>
+          <div
+            class="pt-2 border-t border-[#F0E8DF] flex justify-between text-base font-serif font-semibold text-[#24201E]">
+            <span>Estimated Total</span>
+            <span id="cartTotal">$0</span>
+          </div>
+        </div>
+
+        <button type="button" onclick="window.JencyApp.openCheckoutModal()"
+          class="w-full py-4 bg-[#24201E] hover:bg-[#C59B67] text-[#FAF7F2] text-xs uppercase tracking-widest font-semibold rounded-full shadow-lg transition-all duration-300 flex items-center justify-center gap-2">
+          <span>Proceed to Checkout</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= WISHLIST DRAWER ================= -->
+  <div id="wishlistDrawer" class="fixed inset-0 z-50 pointer-events-none transition-all">
+    <div onclick="window.JencyApp.closeWishlistDrawer()"
+      class="drawer-backdrop absolute inset-0 bg-black/50 backdrop-blur-sm opacity-0 transition-opacity"></div>
+
+    <div
+      class="drawer-panel absolute top-0 right-0 h-full w-full max-w-md bg-[#FAF7F2] shadow-2xl flex flex-col translate-x-full transition-transform duration-300 z-10">
+
+      <div class="p-6 border-b border-[#E8DFD5] flex items-center justify-between bg-white">
+        <div>
+          <h3 class="font-serif text-xl text-[#24201E] font-medium">Saved Creations</h3>
+          <p class="text-[11px] text-[#9C938C] uppercase tracking-wider">Your Personal Wishlist</p>
+        </div>
+        <button onclick="window.JencyApp.closeWishlistDrawer()"
+          class="p-2 text-[#6B625C] hover:text-[#24201E] rounded-full hover:bg-[#F4EFEB] transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="wishlistItemsList" class="flex-1 overflow-y-auto px-6 divide-y divide-[#F0E8DF]">
+        <!-- Populated via js -->
+      </div>
+
+      <div id="wishlistEmptyState" class="hidden flex-1 flex flex-col items-center justify-center p-8 text-center">
+        <div class="w-16 h-16 rounded-full bg-[#F4EFEB] flex items-center justify-center text-[#9C938C] mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+          </svg>
+        </div>
+        <h4 class="font-serif text-xl text-[#24201E]">Your Wishlist is Empty</h4>
+        <p class="text-xs text-[#6B625C] font-light mt-1 max-w-xs">Tap the heart icon on any creation to save it to your
+          private portfolio.</p>
+        <button
+          onclick="window.JencyApp.closeWishlistDrawer(); document.getElementById('collections').scrollIntoView();"
+          class="mt-5 px-6 py-2.5 bg-[#24201E] hover:bg-[#C59B67] text-white text-xs uppercase tracking-widest font-medium rounded-full transition-colors">
+          Explore Catalog
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= QUICK VIEW PRODUCT MODAL ================= -->
+  <div id="quickViewModal" class="hidden fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4 sm:p-6"
+    role="dialog" aria-modal="true">
+    <div onclick="window.JencyApp.closeQuickView()"
+      class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
+
+    <div
+      class="relative bg-white rounded-3xl max-w-4xl w-full shadow-2xl z-10 overflow-hidden border border-[#E8DFD5] my-8 animate-fadeIn">
+      <button type="button" onclick="window.JencyApp.closeQuickView()"
+        class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-[#24201E] hover:bg-[#24201E] hover:text-white transition-colors shadow-sm">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <div id="quickViewContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= LUXURY CHECKOUT MODAL ================= -->
+  <div id="checkoutModal" class="hidden fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4 sm:p-6"
+    role="dialog" aria-modal="true">
+    <div onclick="window.JencyApp.closeCheckoutModal()"
+      class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
+
+    <div
+      class="relative bg-white rounded-3xl max-w-2xl w-full shadow-2xl z-10 overflow-hidden border border-[#E8DFD5] my-8 p-6 sm:p-10">
+
+      <button type="button" onclick="window.JencyApp.closeCheckoutModal()"
+        class="absolute top-6 right-6 text-[#9C938C] hover:text-[#24201E] transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Step 1: Checkout Form -->
+      <div id="checkoutFormStep">
+        <div class="text-center mb-8">
+          <span class="text-xs uppercase tracking-[0.25em] font-sans text-[#C59B67] font-semibold">Maison JENCY
+            Concierge</span>
+          <h3 class="font-serif text-2xl sm:text-3xl text-[#24201E] font-normal mt-1">Order Finalization</h3>
+          <p class="text-xs text-[#6B625C] font-light mt-1">Please provide your private delivery coordinates.</p>
+        </div>
+
+        <form id="checkoutActualForm" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[11px] uppercase tracking-wider text-[#6B625C] mb-1 font-medium">First
+                Name</label>
+              <input type="text" required placeholder="Eleanor"
+                class="w-full px-4 py-2.5 text-xs bg-[#FAF7F2] border border-[#E8DFD5] rounded-lg focus:outline-none focus:border-[#24201E]" />
+            </div>
+            <div>
+              <label class="block text-[11px] uppercase tracking-wider text-[#6B625C] mb-1 font-medium">Last
+                Name</label>
+              <input type="text" required placeholder="Vance"
+                class="w-full px-4 py-2.5 text-xs bg-[#FAF7F2] border border-[#E8DFD5] rounded-lg focus:outline-none focus:border-[#24201E]" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[11px] uppercase tracking-wider text-[#6B625C] mb-1 font-medium">Private
+              Email</label>
+            <input type="email" required placeholder="eleanor.vance@example.com"
+              class="w-full px-4 py-2.5 text-xs bg-[#FAF7F2] border border-[#E8DFD5] rounded-lg focus:outline-none focus:border-[#24201E]" />
+          </div>
+
+          <div>
+            <label class="block text-[11px] uppercase tracking-wider text-[#6B625C] mb-1 font-medium">Delivery
+              Address</label>
+            <input type="text" required placeholder="14 Avenue Montaigne, 75008"
+              class="w-full px-4 py-2.5 text-xs bg-[#FAF7F2] border border-[#E8DFD5] rounded-lg focus:outline-none focus:border-[#24201E]" />
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-[11px] uppercase tracking-wider text-[#6B625C] mb-1 font-medium">City</label>
+              <input type="text" required placeholder="Paris"
+                class="w-full px-4 py-2.5 text-xs bg-[#FAF7F2] border border-[#E8DFD5] rounded-lg focus:outline-none focus:border-[#24201E]" />
+            </div>
+            <div>
+              <label class="block text-[11px] uppercase tracking-wider text-[#6B625C] mb-1 font-medium">Postal
+                Code</label>
+              <input type="text" required placeholder="75008"
+                class="w-full px-4 py-2.5 text-xs bg-[#FAF7F2] border border-[#E8DFD5] rounded-lg focus:outline-none focus:border-[#24201E]" />
+            </div>
+            <div class="col-span-2 sm:col-span-1">
+              <label class="block text-[11px] uppercase tracking-wider text-[#6B625C] mb-1 font-medium">Country</label>
+              <select
+                class="w-full px-4 py-2.5 text-xs bg-[#FAF7F2] border border-[#E8DFD5] rounded-lg focus:outline-none focus:border-[#24201E]">
+                <option>France</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Switzerland</option>
+                <option>Italy</option>
+                <option>India</option>
+                <option>Japan</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Order Summary in modal -->
+          <div class="mt-6 p-4 bg-[#FAF7F2] rounded-xl border border-[#E8DFD5]">
+            <h4 class="text-xs uppercase tracking-wider font-semibold text-[#24201E] mb-3">Order Bag Preview</h4>
+            <div id="checkoutSummaryList" class="space-y-1 mb-3">
+              <!-- Rendered via JS -->
+            </div>
+            <div class="pt-3 border-t border-[#E8DFD5] flex justify-between items-center">
+              <span class="text-xs font-medium text-[#24201E]">Total Due</span>
+              <span id="checkoutFinalTotal" class="font-serif text-lg font-bold text-[#24201E]">$0</span>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <button type="submit"
+              class="w-full py-4 bg-[#24201E] hover:bg-[#C59B67] text-[#FAF7F2] text-xs uppercase tracking-widest font-semibold rounded-full shadow-lg transition-all duration-300 flex items-center justify-center gap-2">
+              <svg class="w-4 h-4 text-[#C59B67]" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <span>Authorize & Place Order</span>
+            </button>
+            <p class="text-[10px] text-center text-[#9C938C] mt-2">Simulated luxury transaction • No payment charged</p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Step 2: Order Confirmation Screen -->
+      <div id="checkoutSuccessStep" class="hidden text-center py-6">
+        <div
+          class="w-16 h-16 rounded-full bg-[#EFE8E0] text-[#C59B67] flex items-center justify-center mx-auto mb-5 shadow-inner">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+
+        <span class="text-xs uppercase tracking-[0.25em] font-sans text-[#C59B67] font-semibold">Order Accepted</span>
+        <h3 class="font-serif text-3xl text-[#24201E] font-normal mt-2">Welcome to the Maison</h3>
+
+        <p id="orderReferenceBadge"
+          class="mt-3 text-xs font-mono uppercase bg-[#FAF7F2] border border-[#E8DFD5] px-4 py-1.5 rounded-full inline-block text-[#6B625C]">
+          Order Reference: JCY-882910
+        </p>
+
+        <p class="text-xs sm:text-sm text-[#6B625C] font-light max-w-md mx-auto mt-4 leading-relaxed">
+          Your order has been transmitted directly to our Florence & Grasse ateliers. Your bespoke keepsake packaging is
+          being prepared with our signature wax seal and silk ribbon.
+        </p>
+
+        <div
+          class="mt-8 p-4 bg-[#FAF7F2] rounded-xl border border-[#E8DFD5] max-w-sm mx-auto text-xs text-[#6B625C] space-y-1">
+          <div class="flex justify-between">
+            <span>Payment Method:</span>
+            <span class="font-medium text-[#24201E]">Atelier Private Wire</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Courier Service:</span>
+            <span class="font-medium text-[#24201E]">Complimentary DHL Express</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Amount Authorized:</span>
+            <span id="orderTotalConfirmation" class="font-serif font-bold text-[#24201E]">$0</span>
+          </div>
+        </div>
+
+        <button type="button" onclick="window.JencyApp.closeCheckoutModal()"
+          class="mt-8 px-8 py-3.5 bg-[#24201E] hover:bg-[#C59B67] text-white text-xs uppercase tracking-widest font-semibold rounded-full transition-colors">
+          Return to Maison
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= FLOATING TOAST CONTAINER ================= -->
+  <div id="toastContainer" class="fixed bottom-6 right-6 z-50 flex flex-col gap-3 pointer-events-none"></div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Mobile navigation toggle
+    const mobileToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenu = document.getElementById('mobileMenuPanel');
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+  </script>
+</body>
+
+</html>

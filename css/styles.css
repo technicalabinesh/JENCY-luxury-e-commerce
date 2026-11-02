@@ -1,0 +1,223 @@
+/* JENCY - Warm Aesthetic & Pastel Luxury Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  --color-canvas: #FAF7F2;
+  --color-canvas-alt: #F4EFEB;
+  --color-card: #FFFFFF;
+  --color-text-main: #24201E;
+  --color-text-muted: #6B625C;
+  --color-text-light: #9C938C;
+  --color-gold: #C59B67;
+  --color-gold-hover: #AF8552;
+  --color-rose: #D8A48F;
+  --color-border: #E8DFD5;
+  --color-border-subtle: #F0E8DF;
+
+  --shadow-warm-sm: 0 4px 12px rgba(45, 35, 25, 0.04);
+  --shadow-warm-md: 0 10px 30px rgba(45, 35, 25, 0.06);
+  --shadow-warm-lg: 0 20px 45px rgba(45, 35, 25, 0.09);
+  --shadow-luxury: 0 25px 60px -12px rgba(42, 34, 27, 0.15);
+}
+
+/* Custom Base */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-canvas);
+  color: var(--color-text-main);
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8CFC5;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C59B67;
+}
+
+/* Luxury Card & Glass effects */
+.luxury-glass {
+  background: rgba(250, 247, 242, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.luxury-card-glass {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 223, 213, 0.7);
+}
+
+.luxury-shadow {
+  box-shadow: var(--shadow-luxury);
+}
+
+.luxury-shadow-sm {
+  box-shadow: var(--shadow-warm-sm);
+}
+
+.luxury-shadow-md {
+  box-shadow: var(--shadow-warm-md);
+}
+
+/* Image zoom & hover transitions */
+.img-zoom-container {
+  overflow: hidden;
+}
+.img-zoom-container img {
+  transition: transform 0.85s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.product-card:hover .img-zoom-container img {
+  transform: scale(1.07);
+}
+
+/* Smooth button shimmer */
+.luxury-btn-primary {
+  background: #24201E;
+  color: #FAF7F2;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.luxury-btn-primary:hover {
+  background: #3D3531;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(36, 32, 30, 0.18);
+}
+.luxury-btn-primary:active {
+  transform: translateY(0);
+}
+
+.luxury-btn-gold {
+  background: linear-gradient(135deg, #C59B67 0%, #B88B52 100%);
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.luxury-btn-gold:hover {
+  background: linear-gradient(135deg, #AF8552 0%, #A47741 100%);
+  box-shadow: 0 10px 25px rgba(197, 155, 103, 0.3);
+  transform: translateY(-1px);
+}
+
+.luxury-btn-outline {
+  border: 1px solid #24201E;
+  color: #24201E;
+  background: transparent;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.luxury-btn-outline:hover {
+  background: #24201E;
+  color: #FAF7F2;
+  transform: translateY(-1px);
+}
+
+/* Decorative Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Drawer & Modal Transitions */
+.drawer-backdrop {
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.drawer-panel {
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Category Pill active styling */
+.filter-pill.active {
+  background-color: #24201E;
+  color: #FAF7F2;
+  border-color: #24201E;
+}
+
+/* Floating Notification Toast */
+.toast-item {
+  animation: toastSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.toast-item.removing {
+  animation: toastSlideOut 0.3s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toastSlideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-15px) scale(0.95);
+  }
+}
+
+/* Shimmer placeholder */
+.shimmer-badge {
+  background: linear-gradient(90deg, rgba(197,155,103,0.1) 0%, rgba(197,155,103,0.25) 50%, rgba(197,155,103,0.1) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Size badge selected */
+.size-btn.selected {
+  border-color: #24201E;
+  background-color: #24201E;
+  color: #FFFFFF;
+}
+
+/* Color swatch selected */
+.color-swatch.selected {
+  box-shadow: 0 0 0 2px #FAF7F2, 0 0 0 4px #24201E;
+}
+
