@@ -1,4 +1,4 @@
-# JENCY — Maison de Luxe & Haute Living
+# JENCY — Luxury E-Commerce & Haute Living
 
 A luxury e-commerce boutique web application designed with a warm pastel aesthetic, editorial typography, and micro-interactions.
 
@@ -59,8 +59,7 @@ A luxury e-commerce boutique web application designed with a warm pastel aesthet
 
 ### Option 1: Direct Browser Launch
 Simply double-click `index.html` or open it with your favorite browser:
-```bash
-# In Windows PowerShell:
+```powershell
 Start-Process .\index.html
 ```
 
@@ -87,6 +86,6 @@ SIH/
 ├── js/
 │   ├── products.js   # Curated product catalog & story data
 │   └── app.js        # State management (Cart, Wishlist, Currency, Filters)
+├── LICENSE           # MIT License
 └── README.md         # Documentation & guide
 ```
-
